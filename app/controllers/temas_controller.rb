@@ -28,7 +28,7 @@ class TemasController < ApplicationController
 
     respond_to do |format|
       if @tema.save
-        format.html { redirect_to @tema, notice: 'Tema was successfully created.' }
+        format.html { redirect_to temas_path, notice: 'Tema was successfully created.' }
         format.json { render :show, status: :created, location: @tema }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class TemasController < ApplicationController
   def update
     respond_to do |format|
       if @tema.update(tema_params)
-        format.html { redirect_to @tema, notice: 'Tema was successfully updated.' }
+        format.html { redirect_to temas_path, notice: 'Tema was successfully updated.' }
         format.json { render :show, status: :ok, location: @tema }
       else
         format.html { render :edit }
