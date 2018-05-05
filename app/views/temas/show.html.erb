@@ -11,4 +11,5 @@
 </p>
 
 <%= link_to 'Edit', edit_tema_path(@tema) %> |
+<%= link_to 'Destroy', @tema, method: :delete, data: { confirm: 'Are you sure?' } %>
 <%= link_to 'Back', temas_path %>
