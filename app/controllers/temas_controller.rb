@@ -61,6 +61,15 @@ class TemasController < ApplicationController
     end
   end
 
+  #TODO: Refactor -move to separate controller
+  def upvote
+    @tema = Tema.find(params[:id])
+    @tema.votes.create
+
+    redirect_to(temas_path)
+  end
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_tema
