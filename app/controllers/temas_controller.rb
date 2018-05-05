@@ -4,7 +4,11 @@ class TemasController < ApplicationController
   # GET /temas
   # GET /temas.json
   def index
-    @temas = Tema.all
+    @temas = Tema.all.order(:votes_count)
+
+    # @orderer = @tema.{|a,b| a.votes.count <=> b.votes.count}
+
+
   end
 
   # GET /temas/1
